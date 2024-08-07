@@ -1,13 +1,13 @@
 # Folders
-GCCalc are a couple scripts I created to look at gc content, ag content, gc skew, and at skew in genomes from ncbi.
+GCCalc contains scripts created to look at gc content, ag content, gc skew, and at skew in genomes from ncbi.
 
-RepeatGC are a set of scripts I created to compare gc content in repeats and non repeats across species from softmasked genomes from ncbi, or from EarlGrey, the conda library for RepeatMasker.
+RepeatGC contains scripts created to compare gc content in repeats and non repeats across species from softmasked genomes from ncbi, or from EarlGrey, the conda library for RepeatMasker.
 
 Ethan Hu 2024 Summer at Sym Geno Evo Lab is a powerpoint presentation showing results of research.
 
 # Highlights
 ## GCCalc
-Using symgenoevolab's [SyntenyFinder](https://github.com/symgenoevolab/SyntenyFinder/tree/main) I attempted to find correlations between ALG ancestral genes of bilaterals and GC content for *B. floridae, P. maximus, L. longissimus, C. mucedo, M. membranacea*
+Using symgenoevolab's [SyntenyFinder](https://github.com/symgenoevolab/SyntenyFinder/tree/main), the scripts were used to look for relationships between ALG ancestral genes of bilaterals and GC content for *B. floridae, P. maximus, L. longissimus, C. mucedo, M. membranacea*
 
 ### Macryosynteny Graph
 ![alt text](https://github.com/Hufamily/GCContent/blob/400847a9767401283069d7c35a74717cc1ae0a6f/images/bilateralMacrosyntenyGraph.png)
