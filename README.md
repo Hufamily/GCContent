@@ -1,5 +1,5 @@
 # Folders
-GCCalc contains scripts created to look at gc content, ag content, gc skew, and at skew in genomes from ncbi.
+GCCalc contains scripts to analyze the base composition of genomes by analyzing gc content, ag content, gc skew, and at skew in windows, chromosomes and other features of the genome. Some scripts were based on ![WenchaoLin's GCcalc](https://github.com/WenchaoLin/GCcalc).
 
 RepeatGC contains scripts created to compare gc content in repeats and non repeats across species from softmasked genomes from ncbi, or from EarlGrey, the conda library for RepeatMasker.
 
