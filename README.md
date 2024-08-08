@@ -1,9 +1,9 @@
 # Folders
-GCCalc contains scripts to analyze the base composition of genomes by analyzing gc content, ag content, gc skew, and at skew in windows, chromosomes and other features of the genome. Some scripts were based on ![WenchaoLin's GCcalc](https://github.com/WenchaoLin/GCcalc).
+```GCCalc/``` contains scripts to analyze the base composition of genomes by analyzing gc content, ag content, gc skew, and at skew in windows, chromosomes and other features of the genome. Some scripts were based on [WenchaoLin's GCcalc](https://github.com/WenchaoLin/GCcalc).
 
-RepeatGC contains scripts created to compare gc content in repeats and non repeats across species from softmasked genomes from ncbi, or from EarlGrey, the conda library for RepeatMasker.
+```RepeatGC/``` contains scripts created to compare gc content in repeats and non repeats across species from softmasked genomes from ncbi, or from EarlGrey, the conda library for RepeatMasker.
 
-Ethan Hu 2024 Summer at Sym Geno Evo Lab is a powerpoint presentation showing results of research.
+```presentation.pdf``` is a powerpoint presentation showing results of research.
 
 # Highlights
 ## GCCalc
