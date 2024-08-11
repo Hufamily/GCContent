@@ -35,7 +35,7 @@ Run ```GCCounter``` with a ```.fna``` genome file as input. It will output ```fi
 
 Example: ```python GCCounter -f genome.fna```
 
-Run ```GCCounter2``` with a ```.fna``` genome file and a ```.gtf``` feature file as input. It will output the base composition metrics mentioned above for each feature in the gtf file, which can be plotted by modifying ```plot2.R```.
+Run ```GCCounter2``` with a ```.fna``` genome file and a ```.gtf``` feature file as input. It will output the base composition metrics mentioned above for each feature in the gtf file, in ```filename.gtf.csv```, which can be plotted by modifying ```plot2.R```.
 
 Example: ```python GCCounter2 -g genome.fna -a annotations.gtf```
 
