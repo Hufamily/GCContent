@@ -22,18 +22,50 @@ GCContent
     ├── download_and_extract_genomes.sh
     └── species_list.txt
 ```
-```GCCalc/``` contains scripts to analyze the base composition of genomes by analyzing gc content, ag content, gc skew, and at skew in windows, chromosomes and other features of the genome. Some scripts were based on [WenchaoLin's GCcalc](https://github.com/WenchaoLin/GCcalc).
+## GCCalc
+```GCCalc/``` contains scripts to analyze the base composition of genomes by analyzing gc content, ag content, gc skew, and at skew in windows, chromosomes and other features of the genome. Some scripts were based on [WenchaoLin's GCcalc](https://github.com/WenchaoLin/GCcalc). The python files require pandas, and biopython.
 
-Run ```GCCounter```
+```Counter.py``` can be used to count the length of chromosomes in a chromosome level assembly.
+
+Example: ```python Counter.py -f genome.fna -i NumberOfChromosomes```
+
+```GC3``` is indended to read the GC3 value, but has not been finished.
+
+Run ```GCCounter``` with a ```.fna``` genome file as input. It will output ```filename.fna.csv```, which contains the base composition metrics mentioned above for each read in the file, which can be plotted by modifying ```plot.R```.
+
+Example: ```python GCCounter -f genome.fna```
+
+Run ```GCCounter2``` with a ```.fna``` genome file and a ```.gtf``` feature file as input. It will output the base composition metrics mentioned above for each feature in the gtf file, which can be plotted by modifying ```plot2.R```.
+
+Example: ```python GCCounter2 -g genome.fna -a annotations.gtf```
+
+```BoxAndWhiskersPlot.R```, ```GCContentPlotOrthologusChromosome.R```, and ```GGPlot2ViolinPlot.R``` are examples of other ways to plot the results from ```GCCounter and GCCounter2```, and their results can be seen in ```presentation.pdf```.
+
+```SlidingWindowAnalysis.ipynb``` also requires numpy and matplotlib. It can be used to create sliding window analyses of reads in a .fna file, and plot in additional location markers using other files that have the coordinates and feature in a dataframe.
+
+## RepeatGC
 
 ```RepeatGC/``` contains scripts created to compare gc content in repeats and non repeats across species from softmasked genomes from ncbi, or from EarlGrey, the conda library for RepeatMasker.
-Running
-File Order: ```species_list > download_and_extract_genomes.sh > check_for_soft_repeatmask.sh > calculate_gc_repeats.py > PlotGCContentForRepeats.ipynb and/or LineRegress.R```
+
+Command Order:
+```
+Manually edit species_list with vscode or another text editor.
+download_and_extract_genomes.sh
+check_for_soft_repeatmask.sh
+python calculate_gc_repeats.py
+Run PlotGCContentForRepeats.ipynb and/or LineRegress.R with vscode or an IDE
+```
+
 ```species_list``` is a text file containing the species names and gc contents. I copied and pasted the species I wanted from ncbi by selecting only those two features in the genome search bar.
+
 Make sure to make the ```download_and_extract_genomes.sh and check_for_soft_repeatmask.sh``` scripts executable by running ```chmod +x download_and_extract_genomes.sh``` and ```chmod +x check_for_soft_repeatmask.sh```.
+
 ```download_and_extract_genomes.sh``` downloads and extracts the genomes from ncbi using ```species_list``` as input. If downloading issues occur, manually add the genome, or run the script again with a shortened ```species_list```.
+
 ```check_for_soft_repeatmask.sh``` outputs whether or not each ```.fna``` file in the directory contains softmasked elements. If the genome does not, either run a repeat masker, or take the genome out of your analysis.
+
 ```caclulate_gc_repeats.py``` requires biopython, os, and csv libraries. It outputs ```gc_content_results.csv``` which contains the fields filename, gc in masked, unmasked, and species.
+
 ```presentation.pdf``` is a powerpoint presentation showing results of research.
 
 # Highlights
