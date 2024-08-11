@@ -35,13 +35,13 @@ Run ```GCCounter``` with a ```.fna``` genome file as input. It will output ```fi
 
 Example: ```python GCCounter -f genome.fna```
 
-Run ```GCCounter2``` with a ```.fna``` genome file and a ```.gtf``` feature file as input. It will output the base composition metrics mentioned above for each feature in the gtf file, in ```filename.gtf.csv```, which can be plotted by modifying ```plot2.R```.
+Run ```GCCounter2``` with a ```.fna``` genome file and a ```.gtf``` feature file as input. It will output the base composition metrics mentioned above for each feature in the ```.gtf``` file, as ```filename.gtf.csv```, which can be plotted by modifying ```plot2.R```.
 
 Example: ```python GCCounter2 -g genome.fna -a annotations.gtf```
 
 ```BoxAndWhiskersPlot.R```, ```GCContentPlotOrthologusChromosome.R```, and ```GGPlot2ViolinPlot.R``` are examples of other ways to plot the results from ```GCCounter and GCCounter2```, and their results can be seen in ```presentation.pdf```.
 
-```SlidingWindowAnalysis.ipynb``` also requires numpy and matplotlib. It can be used to create sliding window analyses of reads in a .fna file, and plot in additional location markers using other files that have the coordinates and feature in a dataframe.
+```SlidingWindowAnalysis.ipynb``` also requires numpy and matplotlib. It can be used to create sliding window analyses of reads in a ```.fna``` file, and plot in additional location markers using other files that have the coordinates and feature in a dataframe.
 
 ## RepeatGC
 
@@ -66,6 +66,9 @@ Make sure to make the ```download_and_extract_genomes.sh and check_for_soft_repe
 
 ```caclulate_gc_repeats.py``` requires biopython, os, and csv libraries. It outputs ```gc_content_results.csv``` which contains the fields filename, gc in masked, unmasked, and species.
 
+```PlotGCContentForRepeats.ipynb``` and ```LineRegress.R``` are ways to visualize ```gc_content_results.csv```, and my graphs can be seen in ```presentation.pdf```
+
+## Other
 ```presentation.pdf``` is a powerpoint presentation showing results of research.
 
 # Highlights
